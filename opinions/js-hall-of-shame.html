@@ -10,13 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-		NextFive How not to die &middot; Modern India edition 
+		NextFive Javascript and graceful failure paradigm <placeholder> &middot;  
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="./public/css/poole.css">
-  <link rel="stylesheet" href="./public/css/hyde.css">
-  <!--link rel="stylesheet" href="./public/css/syntax.css"-->
+  <link rel="stylesheet" href="../public/css/poole.css">
+  <link rel="stylesheet" href="../public/css/hyde.css">
+  <!--link rel="stylesheet" href="../public/css/syntax.css"-->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
@@ -57,12 +57,12 @@
 		  <!--a class="sidebar-nav-item" href="/about/">About</a>
 		  <a class="sidebar-nav-item" href="http://course.NextFive">Our MOOC</a>
 		  <a class="sidebar-nav-item" href="/topics">Posts by Topic</a--> 
-		  <a class=sidebar-nav-item href="./ideas">ideas</a><a class=sidebar-nav-item href="./opinions">opinions</a>
+		  <a class=sidebar-nav-item href="../ideas">ideas</a><a class=sidebar-nav-item href="../opinions">opinions</a>
 		</nav>
 
 		<p>&copy; Amit Kumar, 2018. </p>
 		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-			<img alt="Creative Commons License" style="border-width:0" src="./public/images/cc-80x15.png">
+			<img alt="Creative Commons License" style="border-width:0" src="../public/images/cc-80x15.png">
 		</a>
 		</br>
 		
@@ -74,11 +74,11 @@
 	<!-- head, body and navigation to be generated using nav-template.html -->
     <div class="content container">
 		<div class="post">
-			<span class="post-title"> How not to die - Modern India edition </span>
+			<span class="post-title"> Javascript and graceful failure paradigm <placeholder> -  </span>
 			<!--h1 class="post-title">Alternatives to a Degree to Prove Yourself in Deep Learning </h1-->
 			
 			<!-- TODO: ideally to be picked up from YAML. say author:"Anubha"  post date to be generated from file updated date -->
-			<span class="post-date"> 2018-09-12 </span> <!--by  Amit --> 
+			<span class="post-date">  </span> <!--by   --> 
 			<!--span class="post-date">Written: 06 Apr 2017 by <i>Rachel Thomas</i></span-->
 
 			<!--  TODO: postnote will have a opening disclaimer / intro / context / anything else related to the post content which will come right after -->
@@ -86,7 +86,7 @@
 			<hr/>
 			
 			<!-- TODO: postcontent will have the actual post content from the corresponding md file; minus the YAML front matter in it, if any  -->
-			<ul> <li><p>Do not offer candies to random kids. In fact, it's best if you do not engage with any unknown kid. Do not talk to them. Do not offer to help them cross the road. Do not be seen in their vicinity. Remember, don't talk to ~~strangers~~ unknown kids.</p></li> <li><p>Do not argue / raise objection against govt</p></li> <li><p>Don't be/look like muslims. Or Christians. But especially Muslims. </p></li> <li><p>Don't be female. </p></li> <li><p>Don't be seen near a cow.</p></li> <li><p>Don't eat meat</p></li> </ul>
+			<p><em>_TO DO_</em> <em>1. Check term accuracy: defensive programming, etc</em> <em>2. Link to standard definitions</em> <em>3. Edit the prose</em></p> <p>I had just filled up the form halfway when the "Country/State" dropdowns came up. Only trouble, there were no options to select. "No worries" - I thought, the field does not seem to be mandatory anyway [no aesterisk mark or other equivalent visual indication].</p> <p>Trudging through the remaining fields of the form - leaving another few of the optional ones blank - I completed the form and click "Submit". And nothing happens.</p> <p>Of course, I click it a couple more times undestanding full well the stupidity of my repetitive clicks. May be just in frustration. Another case of <em>ungraceful failure</em>. I check the Firefox console and sure enough, seems like some JS failure on submission. </p> <p>I go on and enable some of the JS on the page and get some of the dropdown fields to start accepting text values. But of course, couple of minutes later it's the same story - "Location has to be selected from the list of options". So, then I go on enable a few more scripts on the page so that the fields can make AJAX calls to populate the said options and allow me to choose from them.</p> <p>And so it goes on for a good 15 minutes. A frustrating, draining and all too common situation these days. The webpage was a recruitment funnel for one of the clients of GreenHouse.Io - a recruitment services provider who apparently provide an "amazing applicant experience".</p> <p>I started out thinking this is over-reliance on JavaScript. But the longer I think about it, the more strongly I believe it's not JS reliance which is the problem. It's the lazy programming. The implicit assumption that every single soul on the internet is allowing any random JS to run willy-nilly on the device she is using. Armed with this erroneous assumption, the developers don't even think about defensive programming or graceful failure patterns wrt to JS dependence. Just how difficult it is to do a on-load check to see if the browser has JS support enabled? Of course, a good service/product will work around this limitation (think Gmail). But at the very least, a developer can warn the end users about JS requirement and declare that certain parts of the page may not work correctly without JS.</p> <p>I have compiled below a list of websites with such lazy programming. This is going to be a running list which I will keep updating based on my time / interest - as and when I encounter more of such pages:</p> <pre><code>1. Greenhouse.io 2. icicibank.com - especially their dashboard page </code></pre>
 		</div>
 
 		
@@ -94,7 +94,7 @@
 			<span>This post is tagged: [
 			  
 				<!-- TODO: ideally to be picked up from YAML. say tags:tag1,tag2,tag3  -->
-				<a href="/tag/advice"><code class="highligher-rouge"><nobr>satire;comic</nobr></code></a>
+				<a href="/tag/advice"><code class="highligher-rouge"><nobr>javascript</nobr></code></a>
 			  
 			] (click a tag for more posts in that category).</span>
 
