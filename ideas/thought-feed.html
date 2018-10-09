@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-		NextFive  &middot;  
+		NextFive Shower thoughts ... &middot;  
   </title>
 
   <!-- CSS -->
@@ -68,21 +68,36 @@
 	  </div>
 	</div>
 
-
+	<!-- head, body and navigation to be generated using nav-template.html -->
+	
     <div class="content container">
-	
+		<div class="post">
+			<h1 class="post-title"> | Shower thoughts ... |  </h1>
+			
+			<span class="post-date"> 2018-10-09  by  <i> Amit </i> </span>
+
+			
+			<hr/>
+			
+			<!-- TODO: postcontent will have the actual post content from the corresponding md file; minus the YAML front matter in it, if any  -->
+			<ul> <li>I am happiest when creating something. Or exploring mountains and hearing stories from folks who live there.</li> </ul> <p>...</p>
+		</div>
+
+		
 		<div class="related">
-			<span>This section has posts tagged: [
-				<!-- TODO: ideally to be picked up from YAML. say tags:tag1,tag2,tag3  -->
-				<!--a href="/tag/advice"><code class="highligher-rouge"><nobr>opinion</nobr></code></a-->
-				
+			<span>This post is tagged: [
+			  
+				<a href="/tag/advice"><code class="highligher-rouge"><nobr>opinions, ideas, facts</nobr></code></a>
+			  
 			] (click a tag for more posts in that category).</span>
+
+
+			<h2>Related Posts</h2>
+			<ul class="related-posts">
+				<!-- TODO: ideally to be picked up from YAML. say related_posts:post1,post2 -->
+			</ul>
 		</div>
-	
-		<div class="posts">
-		<!-- TODO: number of and pointers to the top posts to be read from config file in the top directory -->
-			<div class="post"><h1 class="post-title">How not to die</h1><span class="post-date">---------------------------<br/>'Helpful" hints on surviving in a polarized society<br/></span><a href=./how-not-to-die.html> More </a> <hr/><div class="post"><h1 class="post-title">Shower thoughts ...</h1><span class="post-date">---------------------------<br/>A living list of random thoughts<br/></span><a href=./thought-feed.html> More </a> <hr/>
-		</div>
+
     </div>
 
   </body>
