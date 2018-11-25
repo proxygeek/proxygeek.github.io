@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+		NextFive Publish script - a shell script to create your own static site &middot;  
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../public/css/poole.css">
+  <link rel="stylesheet" href="../public/css/hyde.css">
+  <!--link rel="stylesheet" href="../public/css/syntax.css"-->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="../public/images/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="atom.xml">
+
+</head>
+
+
+  <body>
+
+	<div class="sidebar">
+	  <div class="container sidebar-sticky">
+		<div class="sidebar-about">
+		  <h1>
+			<a href="/"> NextFive </a>
+		  </h1>
+		  <p class="lead">Facts, opinions, ideas, stories</p>
+		</div>
+
+		<nav class="sidebar-nav">
+		  <!--a class="sidebar-nav-item" href="/about/">Opinions / Ideas / Stories</a>
+		  <a class="sidebar-nav-item" href="/topics">Posts by Topic</a--> 
+		  <a class=sidebar-nav-item href="../about">about</a><a class=sidebar-nav-item href="../ideas">ideas</a><a class=sidebar-nav-item href="../opinions">opinions</a><a class=sidebar-nav-item href="../projects">projects</a>
+		</nav>
+
+		<p>&copy; Amit Kumar, 2018. </p>
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+			<img alt="Creative Commons License" style="border-width:0" src="../public/images/cc-80x15.png">
+		</a>
+		</br>
+		
+	  </div>
+	</div>
+
+		<!-- head, body and navigation to be generated using nav-template.html -->
+	
+    <div class="content container">
+		<div class="post">
+			<h1 class="post-title"> | Publish script - a shell script to create your own static site |  </h1>
+			
+			<span class="post-date"> 2018-10-09  by  <i> Amit </i> </span>
+
+			
+			<hr/>
+			
+			<h2>What is this</h2> <p>A shell script I cobbled together to create a static website with navigation based on folder structure of your posts. This website is generated using the same script.</p> <p>The html is created on a lightly modified version of <a href="https://github.com/Jack000/Expose">Expose</a> - a wonderful bash script by <a href="http://jack.works/">Jack Qiao</a> Theme is based off <a href="https://github.com/poole/hyde">Hyde</a> but you can change it easily by just replacing the theme directory.</p> <p>It's current state is essentially a template of how <em>NOT</em> to write a shell script. <br> The mess is my own fault but I will keep improving it whenever I can. <br> In the mean time, it works! Sort of... </p> <p>More details on <a href="https://proxygeek.github.io/about/this-blog.html">this post</a></p> <h2>How does it work</h2> <p><strong>Things it needs:</strong> <br> 1. A theme folder essentially containing some css/images/html templates as needed <br> 2. <a href="https://daringfireball.net/projects/markdown/">Markdown script</a> and <a href="https://www.perl.org/get.html">Perl</a>: <em>Optional</em> Only if you need markdown support <br> 3. A folder of your own writing <br> - Your-Folder <br> - SubFolder-1 <br> - post<em>1.txt <br> - post</em>2.md <br> - SubFolder-2 <br> - another_post.md <br> - SubFolder-3 <br> .... <br> - SubFolder-n </p> <p>Just run the script in <strong><em>Your-Folder</em></strong> and it will generate a static website under <strong><em>Your-Folder/</em>site/_</strong> directory. The subdirectories will be treated as different sections of the website and navigation will be generated accordingly. Empty directories will be ignored.</p> <h2>Current issues</h2> <ul> <li>Refactor the code to remove redundant logic and restructure for clarity</li> <li>Fix post tag search / links , especially in case of multiple tags for a post</li> <li>Generate section level tag cloud from individual post tags: dir<em>tag</em>cloud</li> <li>Number of (and links to) top posts to be read from config file in the top directory</li> <li>Pick up related posts from YAML. say related_posts:post1,post2</li> <li>Sort command changes made to process the files / dirs in the order of most recent updates causes an additional directory to be created under _site directory <ul> <li>Can be easily fixed by using the alphabetical sort instead - currently commented out </li> </ul></li> <li>_And many, many more but none that should stop you from giving this a whirl :) _</li> </ul>
+		</div>
+
+		
+		<div class="related">
+			<span>This post is tagged: [
+			  
+				<a href="/tag/advice"><code class="highligher-rouge"><nobr>facts</nobr></code></a>
+			  
+			] (click a tag for more posts in that category).</span>
+
+
+			<h2>Related Posts</h2>
+			<ul class="related-posts">
+
+			</ul>
+		</div>
+
+    </div>
+
+  </body>
+</html>
