@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <style>
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        overflow-y: auto;
+      }
+
+      .content-container {
+	width: 100%;
+	max-width: 768px;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+        padding: 16px;
+      }
+
+      .card {
+	  width: 100%;
+	  max-width: 512px;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+	  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+	  margin: 16px auto;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+      }
+
+      /*@media (min-width: 768px) {
+	  .card {
+	      width: 50%;
+	  }
+      }*/
+
+      
+      .card-header {
+	  padding: 16px;
+	  font-size: 12px;
+	  font-weight: bold;
+	  text-align: left;
+	  background-color: #eee;
+	  border-bottom: 1px solid #ddd;
+      }
+
+      .card-body {
+	  padding: 16px;
+	  font-size: 14px;
+	  text-align: center;
+      }
+      
+      .sticky-input {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-content">
+      <div class="content-container" id="scrollable-content">
+        <!-- Your scrollable content here -->
+	<div class="card">
+	  <p class="card-header">Idea header 1 text</p>
+	  <p class="card-body">Pitch 1</p>
+	</div>
+
+	<div class="card">
+	  <p class="card-header">Idea header 2 text</p>
+	  <p class="card-body">Pitch 2</p>
+	</div>
+
+	<div class="card">
+	  <p class="card-header">Idea header 3 text</p>
+	  <p class="card-body">Pitch 3</p>
+	</div>
+	
+	<div class="card">
+	  <p class="card-header">Idea header 4 text</p>
+	  <p class="card-body">Pitch 4</p>
+	</div>
+
+	<div class="card">
+	  <p class="card-header">Idea header 5 text</p>
+	  <p class="card-body">Pitch 5</p>
+	</div>
+
+	<!-- End of content -->
+      </div>
+    </div>
+    <div class="sticky-input">
+      <input type="text" placeholder="Enter text here" id="input-field" />
+      <script>
+	// Restricting text input to max 12 words
+	var inputField = document.getElementById("input-field");
+	var maxWords = 12;
+
+	inputField.addEventListener("input", function() {
+	    var words = inputField.value.trim().split(/\s+/);
+	    if (words.length > maxWords) {
+		words = words.slice(0, maxWords);
+		inputField.value = words.join(" ");
+	    }
+	});
+      </script>
+      <button type="button">Add my idea!</button> 
+    </div>
+  </body>
+  <script>
+    // Trying to ensure the text input always stays at the bottom of the screen,
+    document.getElementById("scrollable-content").addEventListener("scroll", function() {
+	var stickyInput = document.getElementById("sticky-input");
+	stickyInput.style.bottom = window.innerHeight - stickyInput.getBoundingClientRect().top + "px";});
+  </script>
+  </html>
