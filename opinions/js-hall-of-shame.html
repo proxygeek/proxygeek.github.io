@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -17,23 +17,13 @@
   <link rel="stylesheet" href="../public/css/poole.css">
   <link rel="stylesheet" href="../public/css/hyde.css">
   <!--link rel="stylesheet" href="../public/css/syntax.css"-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
   <link rel="shortcut icon" href="../public/images/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="atom.xml">
-
-  <!-- So sorry about this; Need to come up with an alternative here -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133673270-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-133673270-1');
-	</script>
 
 </head>
 
@@ -52,11 +42,11 @@
 		<nav class="sidebar-nav">
 		  <!--a class="sidebar-nav-item" href="/about/">Opinions / Ideas / Stories</a>
 		  <a class="sidebar-nav-item" href="/topics">Posts by Topic</a--> 
-		  <a class=sidebar-nav-item href="../about">about</a><a class=sidebar-nav-item href="../ideas">ideas</a><a class=sidebar-nav-item href="../opinions">opinions</a><a class=sidebar-nav-item href="../projects">projects</a>
+		  <a class=sidebar-nav-item href="../about">about</a><a class=sidebar-nav-item href="../ideas">ideas</a><a class=sidebar-nav-item href="../opinions">opinions</a><a class=sidebar-nav-item href="../projects">projects</a><a class=sidebar-nav-item href="../travel">travel</a>
 		</nav>
 
 		<p>&copy; Amit Kumar, 2018. </p>
-		<a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
 			<img alt="Creative Commons License" style="border-width:0" src="../public/images/cc-80x15.png">
 		</a>
 		</br>
@@ -75,14 +65,14 @@
 			
 			<hr/>
 			
-			<p><em>_TO DO_</em> <em>1. Check term accuracy: defensive programming, etc</em> <em>2. Link to standard definitions</em> <em>3. Edit the prose</em></p> <p><code>&lt;rant&gt;</code> <br> I had just filled up the form halfway when the "Country/State" drop-downs came up. Only trouble, there were no options to select. "No worries" - I thought, the field does not seem to be mandatory anyway (no asterisk mark or other equivalent visual indication).</p> <p>Trudging through the remaining fields of the form - leaving another few of the optional ones blank - I completed the form and click "Submit". And nothing happens.</p> <p>Of course, I click it a couple more times understanding full well the stupidity of my repetitive clicks. May be just in frustration. Another case of <em>ungraceful failure</em>. I check the Firefox console and sure enough, seems like some JS failure on submission. </p> <p>I go on and enable some of the JS on the page and get some of the drop-down fields to start accepting text values. But of course, couple of minutes later it's the same story - "Location has to be selected from the list of options". So, then I go on enable a few more scripts on the page so that the fields can make AJAX calls to populate the said options and allow me to choose from them.</p> <p>And so it goes on for a good 15 minutes. A frustrating, draining and all too common situation these days. The page was a recruitment funnel for one of the clients of GreenHouse.Io - a recruitment services provider who apparently provide an "amazing applicant experience". <code>&lt;/rant&gt;</code> </p> <p>I started out thinking this is over-reliance on JavaScript. But the longer I think about it, the more strongly I believe it's not JS reliance which is the problem. It's the lazy programming. <strong><em>The implicit assumption that every single soul on the internet is allowing any random JS to run willy-nilly on the device she is using.</em></strong></p> <p>Armed with this erroneous assumption, the developers don't even think about defensive programming or graceful failure patterns with respect to JS dependence. Just how difficult it is to do a on-load check to see if the browser has JS support enabled? Of course, a good service/product will work around this limitation (think Gmail). But at the very least, a developer can warn the end users about JS requirement and declare that certain parts of the page may not work correctly without JS.</p> <p>I have compiled below a list of websites with such lazy programming. <br> This is going to be a running list which I will keep updating based on my time / interest - as and when I encounter more of such pages:</p> <pre><code>1. Greenhouse.io 2. Icicibank.com - especially their dashboard page 3. Google re-captcha implementation </code></pre>
+			<p><em>_TO DO_</em> <em>1. Check term accuracy: defensive programming, etc</em> <em>2. Link to standard definitions</em> <em>3. Edit the prose</em></p> <p><code>&lt;rant&gt;</code>\ I had just filled up the form halfway when the \"Country/State\" drop-downs came up. Only trouble, there were no options to select. \"No worries\" - I thought, the field does not seem to be mandatory anyway (no asterisk mark or other equivalent visual indication).</p> <p>Trudging through the remaining fields of the form - leaving another few of the optional ones blank - I completed the form and click \"Submit\". And nothing happens.</p> <p>Of course, I click it a couple more times understanding full well the stupidity of my repetitive clicks. May be just in frustration. Another case of <em>ungraceful failure</em>. I check the Firefox console and sure enough, seems like some JS failure on submission.</p> <p>I go on and enable some of the JS on the page and get some of the drop-down fields to start accepting text values. But of course, couple of minutes later it\'s the same story - \"Location has to be selected from the list of options\". So, then I go on enable a few more scripts on the page so that the fields can make AJAX calls to populate the said options and allow me to choose from them.</p> <p>And so it goes on for a good 15 minutes. A frustrating, draining and all too common situation these days. The page was a recruitment funnel for one of the clients of GreenHouse.Io - a recruitment services provider who apparently provide an \"amazing applicant experience\". <code>&lt;/rant&gt;</code></p> <p>I started out thinking this is over-reliance on JavaScript. But the longer I think about it, the more strongly I believe it\'s not JS reliance which is the problem. It\'s the lazy programming. <strong><em>The implicit assumption that every single soul on the internet is allowing any random JS to run willy-nilly on the device she is using.</em></strong></p> <p>Armed with this erroneous assumption, the developers don\'t even think about defensive programming or graceful failure patterns with respect to JS dependence. Just how difficult it is to do a on-load check to see if the browser has JS support enabled? Of course, a good service/product will work around this limitation (think Gmail). But at the very least, a developer can warn the end users about JS requirement and declare that certain parts of the page may not work correctly without JS.</p> <p>I have compiled below a list of websites with such lazy programming.\ This is going to be a running list which I will keep updating based on my time / interest - as and when I encounter more of such pages:</p> <pre><code>1. Greenhouse.io 2. Icicibank.com - especially their dashboard page 3. Google re-captcha implementation </code></pre>
 		</div>
 
 		
 		<div class="related">
 			<span>This post is tagged: [
 			  
-				<a href="/tag/advice"><code class="highligher-rouge"><nobr>opinions, javascript</nobr></code></a>
+				<a href="/tag/advice"><code class="highligher-rouge"><nobr>javascript, opinion, nextfive</nobr></code></a>
 			  
 			] (click a tag for more posts in that category).</span>
 
